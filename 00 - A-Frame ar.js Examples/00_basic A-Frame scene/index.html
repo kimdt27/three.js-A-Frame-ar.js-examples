@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>A-FRAME 360 Image and geometry</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene renderer="colorManagement: true;">
+      <!-- 360-degree image background -->
+      <a-sky src="https://images.squarespace-cdn.com/content/v1/5568ec94e4b06c17240d5220/1447825004267-UF9M2OEG6M8GXD1FNZQV/image-asset.jpeg"></a-sky>
+
+      <!-- 3D models -->
+      <a-box position="0 1 -5" radius="1" color="green" animation="property: position; to: 0 1 -2; dur: 5000; easing: linear; loop: true;"></a-box>
+      <a-entity position="0 0 -6" gltf-model="tower.glb"></a-entity>
+      <a-entity geometry="primitive: plane; height: 20; width: 20" rotation="-90 0 0" material="src: bri.jpg"></a-entity>
+      
+      <!-- Camera rig for user's viewpoint -->
+      <a-entity id="cameraRig" position="0 1 0">
+        <a-camera wasd-controls></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

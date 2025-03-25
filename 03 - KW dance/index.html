@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.174.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.174.0/examples/jsm/"
+              }
+            }
+          </script>
+		<title>KW anim</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            #btns{
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+        </style>
+	</head>
+	<body>
+        <div id="btns">
+            <button id="btn1">Idle</button>
+            <button id="btn2">Dance</button>
+            <button id="btn3">Fireball</button>
+            <button id="btn4">Walk</button>
+            <button id="btn5">tpose</button>
+        </div>
+        <script type="module">
+            import { App } from './app.js';
+
+            document.addEventListener("DOMContentLoaded", function(){
+                const app = new App();
+                window.app = app;
+            });
+        </script>
+	</body>
+</html>
